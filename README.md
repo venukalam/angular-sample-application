@@ -17,6 +17,10 @@ Database - MongoDB
 	*  3.7 Logout feature
 
 
+**Screenshots**
+
+![Alt text](/frontend\src\assets\screenshot_1.png?raw=true "Login Page")
+
 
 
 
