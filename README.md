@@ -22,7 +22,7 @@ Database - MongoDB.
 ![image](frontend/src/assets/screenshot_1.png?raw=true "Login Page")
 ![image](frontend/src/assets/screenshot_2.png?raw=true "Register Page")
 ![image](frontend/src/assets/screenshot_3.png?raw=true "Home Page")
-![image](frontend/src/assets/screenshot_3.png?raw=true "Organization Details")
+![image](frontend/src/assets/screenshot_4.png?raw=true "Organization Details")
 
 
 
