@@ -19,7 +19,7 @@ Database - MongoDB.
 
 **Screenshots**
 
-![Alt text](./frontend\src\assets\screenshot_1.png?raw=true "Login Page")
+![ScreenShot](./frontend\src\assets\screenshot_1.png?raw=true "Login Page")
 
 
 
