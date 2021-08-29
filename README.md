@@ -19,7 +19,7 @@ Database - MongoDB.
 
 **Screenshots**
 
-![image](https://raw.githubusercontent.com/venukalam/angular-sample-application/master/frontend/src/assets/screenshot_1.png?raw=true)
+![image](frontend/src/assets/screenshot_1.png?raw=true)
 
 
 
