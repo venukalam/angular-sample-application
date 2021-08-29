@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="row">
+        <form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="col-md-8 mx-auto">
+                <mat-card>
+                    <mat-card-title> Add new Organization
+                    </mat-card-title>
+                    <mat-divider></mat-divider>
+                    <mat-card-content>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Organization Name</label>
+                                <input type="text" class="form-control" formControlName="organizationName">
+                                <span class="text-danger"
+                                    *ngIf="(registerFormControl.organizationName.touched || submitted) && registerFormControl.organizationName.errors?.required">
+                                    Organization Name is required
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label>Department Owner</label>
+                                <input type="text" class="form-control" formControlName="departmentOwner">
+                                <span class="text-danger"
+                                    *ngIf="(registerFormControl.departmentOwner.touched || submitted) && registerFormControl.departmentOwner.errors?.required">
+                                    Department is required
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label>description</label>
+                                <input type="text" class="form-control" formControlName="description">
+                                <span class="text-danger"
+                                    *ngIf="(registerFormControl.description.touched || submitted) && registerFormControl.description.errors?.required">
+                                    description is required
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label>workingTime</label>
+                                <input type="text" class="form-control" formControlName="workingTime">
+                                <span class="text-danger"
+                                    *ngIf="(registerFormControl.workingTime.touched || submitted) && registerFormControl.workingTime.errors?.required">
+                                    workingTime is required
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label>workingDays</label>
+                                <input type="text" class="form-control" formControlName="workingDays">
+                                <span class="text-danger"
+                                    *ngIf="(registerFormControl.workingDays.touched || submitted)&& registerFormControl.workingDays.errors?.required">
+                                    workingDays is required
+                                </span>
+                            </div>
+                        </div>
+                    </mat-card-content>
+                    <mat-divider></mat-divider>
+                    <mat-card-actions style="text-align: end;">
+                        <button type="submit" class="btn btn-success">Register</button>
+                        <button [routerLink]="['/department']" class="btn btn-danger">Cancel</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </form>
+    </div>
+</div>

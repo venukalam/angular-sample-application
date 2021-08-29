@@ -1,0 +1,42 @@
+<div class="home-page">
+    <mat-card>
+        <mat-card-content>
+            <mat-grid-list cols="3" rowHeight="2:1" [gutterSize]="'10px'">
+                <mat-grid-tile [style.background]="'blue'">
+                    <mat-grid-tile-header>
+                        <h1> Total Organizations </h1>
+                    </mat-grid-tile-header>
+                    <div>
+                        <h1 [style.color]="'white'"> {{orgCount}} </h1>
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile [style.background]="'green'">
+                    <mat-grid-tile-header>
+                        <h1> Total Departments</h1>
+                    </mat-grid-tile-header>
+                    <div>
+                        <h1 [style.color]="'white'"> {{depCount}} </h1>
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile [style.background]="'brown'">
+                    <mat-grid-tile-header>
+                        <h1> Total Employees</h1>
+                    </mat-grid-tile-header>
+                    <div>
+                        <h1 [style.color]="'white'"> {{empCount}} </h1>
+                    </div>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </mat-card-content>
+    </mat-card>
+    <mat-divider></mat-divider>
+    <mat-card>
+        <mat-card-title> Reports
+        </mat-card-title>
+        <mat-card-content>
+            <div class="card">
+                <p-chart type="line" [data]="lineStylesData"></p-chart>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

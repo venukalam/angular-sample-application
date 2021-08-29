@@ -1,0 +1,63 @@
+<div>
+    <div class="dashboard-table">
+        <mat-card>
+            <mat-card-title> Department Details
+            </mat-card-title>
+            <mat-divider></mat-divider>
+            <mat-card-actions style="text-align: end;">
+                <button [routerLink]="['/department/update']" class="btn btn-success">Add</button>
+            </mat-card-actions>
+            <mat-card-content>
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                    <ng-container matColumnDef="organizationName">
+                        <th mat-header-cell *matHeaderCellDef>Organization name</th>
+                        <td mat-cell *matCellDef="let element"> {{element.organizationName}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="departmentOwner">
+                        <th mat-header-cell *matHeaderCellDef> Department Owner </th>
+                        <td mat-cell *matCellDef="let element"> {{element.departmentOwner}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="description">
+                        <th mat-header-cell *matHeaderCellDef> description </th>
+                        <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="workingTime">
+                        <th mat-header-cell *matHeaderCellDef> workingTime </th>
+                        <td mat-cell *matCellDef="let element"> {{element.workingTime}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="workingDays">
+                        <th mat-header-cell *matHeaderCellDef> workingDays </th>
+                        <td mat-cell *matCellDef="let element"> {{element.workingDays}} </td>
+                    </ng-container>
+
+                    <!-- Action Column -->
+                    <ng-container matColumnDef="edit">
+                        <th mat-header-cell *matHeaderCellDef> Edit </th>
+                        <td mat-cell *matCellDef="let element">
+                            <button mat-icon-button matTooltip="Click to Edit" class="iconbutton" color="primary"
+                                (click)="edit(element.id)">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                        </td>
+                    </ng-container>
+                    <ng-container matColumnDef="delete">
+                        <th mat-header-cell *matHeaderCellDef> Delete </th>
+                        <td mat-cell *matCellDef="let element">
+                            <button mat-icon-button matTooltip="Click to Delete" class="iconbutton"
+                                (click)="delete(element.id)" color="warn">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

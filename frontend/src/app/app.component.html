@@ -1,0 +1,40 @@
+<mat-toolbar color="primary" class="example-toolbar">
+  <button mat-icon-button (click)="isExpanded = !isExpanded">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <h1 class="example-app-name">Full Stack Test</h1>
+</mat-toolbar>
+<mat-sidenav-container class="example-container" autosize>
+  <mat-sidenav *ngIf="user" #sidenav class="example-sidenav" mode="side" opened="true" (mouseenter)="mouseenter()"
+    (mouseleave)="mouseleave()">
+    <mat-nav-list>
+      <mat-list-item [routerLink]="['/']" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing">Home</span>
+        <mat-icon mat-list-icon>home</mat-icon>
+      </mat-list-item>
+      <mat-list-item [routerLink]="['/organization']" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing">Organization</span>
+        <mat-icon mat-list-icon>location_city</mat-icon>
+      </mat-list-item>
+      <mat-list-item [routerLink]="['/department']" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing">Departments</span>
+        <mat-icon mat-list-icon>domain</mat-icon>
+      </mat-list-item>
+      <mat-list-item [routerLink]="['/employee']" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing">Employees</span>
+        <mat-icon mat-list-icon>people</mat-icon>
+      </mat-list-item>
+      <mat-list-item [routerLink]="['/calendar']" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing">Calendar</span>
+        <mat-icon mat-list-icon>calendar_today</mat-icon>
+      </mat-list-item>
+      <mat-list-item (click)="logout()" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing">Logout</span>
+        <mat-icon mat-list-icon>logout</mat-icon>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+</mat-sidenav-content>
+</mat-sidenav-container>

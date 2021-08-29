@@ -1,0 +1,68 @@
+<div>
+    <div class="dashboard-table">
+        <mat-card>
+            <mat-card-title> Organization Details
+            </mat-card-title>
+            <mat-divider></mat-divider>
+            <mat-card-actions style="text-align: end;">
+                <button [routerLink]="['/organization/update']" class="btn btn-success">Add</button>
+            </mat-card-actions>
+            <mat-card-content>
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                    <ng-container matColumnDef="organizationName">
+                        <th mat-header-cell *matHeaderCellDef>Organization name</th>
+                        <td mat-cell *matCellDef="let element"> {{element.organizationName}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="owner">
+                        <th mat-header-cell *matHeaderCellDef> owner </th>
+                        <td mat-cell *matCellDef="let element"> {{element.owner}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="address">
+                        <th mat-header-cell *matHeaderCellDef> address </th>
+                        <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="city">
+                        <th mat-header-cell *matHeaderCellDef> city </th>
+                        <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="state">
+                        <th mat-header-cell *matHeaderCellDef> state </th>
+                        <td mat-cell *matCellDef="let element"> {{element.state}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="country">
+                        <th mat-header-cell *matHeaderCellDef> country </th>
+                        <td mat-cell *matCellDef="let element"> {{element.country}} </td>
+                    </ng-container>
+
+                    <!-- Action Column -->
+                    <ng-container matColumnDef="edit">
+                        <th mat-header-cell *matHeaderCellDef> Edit </th>
+                        <td mat-cell *matCellDef="let element">
+                            <button mat-icon-button matTooltip="Click to Edit" class="iconbutton" color="primary"
+                                (click)="edit(element.id)">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                        </td>
+                    </ng-container>
+                    <ng-container matColumnDef="delete">
+                        <th mat-header-cell *matHeaderCellDef> Delete </th>
+                        <td mat-cell *matCellDef="let element">
+                            <button mat-icon-button matTooltip="Click to Delete" class="iconbutton"
+                                (click)="delete(element.id)" color="warn">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="row">
+        <form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="col-md-8 mx-auto">
+                <mat-card>
+                    <mat-card-title> Add new Organization
+                    </mat-card-title>
+                    <mat-divider></mat-divider>
+                    <mat-card-content>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Organization Name</label>
+                                <input type="text" class="form-control" formControlName="organizationName">
+                                <span class="text-danger"
+                                    *ngIf="(registerFormControl.organizationName.touched || submitted) && registerFormControl.organizationName.errors?.required">
+                                    Organization Name is required
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label>Owner</label>
+                                <input type="text" class="form-control" formControlName="owner">
+                                <span class="text-danger"
+                                    *ngIf="(registerFormControl.owner.touched || submitted) && registerFormControl.owner.errors?.required">
+                                    Owner is required
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label>Address</label>
+                                <input type="text" class="form-control" formControlName="address">
+                                <span class="text-danger"
+                                    *ngIf="(registerFormControl.address.touched || submitted) && registerFormControl.address.errors?.required">
+                                    Address is required
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label>City</label>
+                                <input type="text" class="form-control" formControlName="city">
+                                <span class="text-danger"
+                                    *ngIf="(registerFormControl.city.touched || submitted) && registerFormControl.city.errors?.required">
+                                    City is required
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label>State</label>
+                                <input type="text" class="form-control" formControlName="state">
+                                <span class="text-danger"
+                                    *ngIf="(registerFormControl.state.touched || submitted)&& registerFormControl.state.errors?.required">
+                                    State is required
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label>Country</label>
+                                <input type="text" class="form-control" formControlName="country">
+                                <span class="text-danger"
+                                    *ngIf="(registerFormControl.country.touched || submitted) && registerFormControl.country.errors?.required">
+                                    Country is required
+                                </span>
+                            </div>
+                        </div>
+                    </mat-card-content>
+                    <mat-divider></mat-divider>
+                    <mat-card-actions style="text-align: end;">
+                        <button type="submit" class="btn btn-success">Register</button>
+                        <button [routerLink]="['/organization']" class="btn btn-danger">Cancel</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </form>
+    </div>
+</div>

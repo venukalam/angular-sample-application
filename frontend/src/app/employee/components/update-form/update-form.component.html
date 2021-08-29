@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="row">
+        <form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="col-md-8 mx-auto">
+                <mat-card>
+                    <mat-card-title> Add new Organization
+                    </mat-card-title>
+                    <mat-divider></mat-divider>
+                    <mat-card-content>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Organization Name</label>
+                                <input type="text" class="form-control" formControlName="organizationName">
+                                <span class="text-danger"
+                                    *ngIf="(registerFormControl.organizationName.touched || submitted) && registerFormControl.organizationName.errors?.required">
+                                    Organization Name is required
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label>departmentName</label>
+                                <input type="text" class="form-control" formControlName="departmentName">
+                                <span class="text-danger"
+                                    *ngIf="(registerFormControl.departmentName.touched || submitted) && registerFormControl.departmentName.errors?.required">
+                                    departmentName is required
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label>firstName</label>
+                                <input type="text" class="form-control" formControlName="firstName">
+                                <span class="text-danger"
+                                    *ngIf="(registerFormControl.firstName.touched || submitted) && registerFormControl.firstName.errors?.required">
+                                    firstName is required
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label>lastName</label>
+                                <input type="text" class="form-control" formControlName="lastName">
+                                <span class="text-danger"
+                                    *ngIf="(registerFormControl.lastName.touched || submitted) && registerFormControl.lastName.errors?.required">
+                                    lastName is required
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label>dob</label>
+                                <input type="text" class="form-control" formControlName="dob">
+                                <span class="text-danger"
+                                    *ngIf="(registerFormControl.dob.touched || submitted)&& registerFormControl.dob.errors?.required">
+                                    dob is required
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label>workTitle</label>
+                                <input type="text" class="form-control" formControlName="workTitle">
+                                <span class="text-danger"
+                                    *ngIf="(registerFormControl.workTitle.touched || submitted) && registerFormControl.workTitle.errors?.required">
+                                    workTitle is required
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label>totalExperience</label>
+                                <input type="text" class="form-control" formControlName="totalExperience">
+                                <span class="text-danger"
+                                    *ngIf="(registerFormControl.totalExperience.touched || submitted) && registerFormControl.totalExperience.errors?.required">
+                                    totalExperience is required
+                                </span>
+                            </div>
+                        </div>
+                    </mat-card-content>
+                    <mat-divider></mat-divider>
+                    <mat-card-actions style="text-align: end;">
+                        <button type="submit" class="btn btn-success">Register</button>
+                        <button [routerLink]="['/employee']" class="btn btn-danger">Cancel</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </form>
+    </div>
+</div>
