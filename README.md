@@ -1,8 +1,8 @@
 # A Sample FullStack Application
 
-Front-End - Angular(version 11.1.1)
-Back-End - Node-JS(Express.js)
-Database - MongoDB
+Front-End - Angular(version 11.1.1).
+Back-End - Node-JS(Express.js).
+Database - MongoDB.
 
 **Features Include**
 1.  login page 
