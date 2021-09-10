@@ -5,7 +5,7 @@ Back-End - Node-JS(Express.js).
 Database - MongoDB.
 
 **Features Include**
-1.  login page 
+1.  login page (Using JWT)
 2.  register page 
 3.  home page.
     *  3.1 Sidebar
